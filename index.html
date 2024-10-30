@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/funciones.js"></script>
     <title>Panadería Conchita</title>
   </head>
   <body onload="mostrarProductos()">
-    <div><h1>Panadería</h1></div>
+    <div>
+      <h1>Panadería Conchita</h1>
+      <h2>Tu pan al mejor precio</h2>
+    </div>
     <div>
       <label for="producto"
         >Producto:
@@ -17,13 +21,11 @@
       </label>
       <label for="precio"
         >Precio:
-        <select name="precio" id="precio">
-          <option value="">--</option>
-        </select></label
-      >
+        <input name="precio" id="precio" readonly />
+      </label>
       <label for="cantidad"
         >Cantidad:
-        <input type="text" id="cantidad" />
+        <input type="number" id="cantidad" />
       </label>
       <label for="add">
         <button id="add" onclick="addProducto()">add</button>
@@ -31,20 +33,13 @@
     </div>
 
     <div>
-      <table style="border: 1px solid">
+      <table id="tablaProductos" hidden>
         <tr>
           <th>Producto</th>
           <th>Precio u.</th>
+          <th>Cantidad</th>
           <th>Total</th>
           <th>Borrar</th>
-        </tr>
-        <tr>
-          <td>Chapata</td>
-          <td>asdas</td>
-          <td>asdas</td>
-          <td>
-            <input type="checkbox" name="" id="borrar"></input>
-          </td>
         </tr>
       </table>
     </div>
