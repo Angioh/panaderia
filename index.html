@@ -6,12 +6,12 @@
     <script src="./js/funciones.js"></script>
     <title>Panadería Conchita</title>
   </head>
-  <body onload="mostrarLista()">
+  <body onload="mostrarProductos()">
     <div><h1>Panadería</h1></div>
     <div>
       <label for="producto"
         >Producto:
-        <select name="producto" id="producto">
+        <select name="producto" id="producto" onchange="cargarPrecio()">
           <option value="" disabled selected>--Seleccione--</option>
         </select>
       </label>
@@ -24,6 +24,9 @@
       <label for="cantidad"
         >Cantidad:
         <input type="text" id="cantidad" />
+      </label>
+      <label for="add">
+        <button id="add" onclick="addProducto()">add</button>
       </label>
     </div>
 
@@ -39,6 +42,9 @@
           <td>Chapata</td>
           <td>asdas</td>
           <td>asdas</td>
+          <td>
+            <input type="checkbox" name="" id="borrar"></input>
+          </td>
         </tr>
       </table>
     </div>
